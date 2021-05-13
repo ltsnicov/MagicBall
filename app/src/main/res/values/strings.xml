@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">My Application Nicolas Villagran</string>
     <string name="conoce_tu_futuro">¡Conoce tu Futuro!</string>
+    <string name="escriba_un_mensaje">Escriba un mensaje</string>
+    <string name="el_textview">El textView</string>
+    <string name="todo">TODO</string>
 </resources>
