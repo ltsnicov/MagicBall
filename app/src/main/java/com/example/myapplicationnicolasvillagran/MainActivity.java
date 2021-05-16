@@ -1,8 +1,11 @@
 package com.example.myapplicationnicolasvillagran;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -11,10 +14,15 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private EditText pregunta;
+
     private ImageButton Ball;
     private TextView respuesta;
-    private String [] respuestaArray={"Lo Dudo...","Es un poco tarde ¿No crees?","Lo veo plausible",
-            "Definitivamente","Hmmm... No estes tan seguro de eso","No te hagas muchas expectativas respecto a ello..."};
+    private MediaPlayer mediaPlayer;
+    private String [] respuestaArray={"Lo Dudo...","Es un poco tarde","Lo veo plausible",
+            "Definitivamente","Hmmm... No estes tan seguro de eso", "Puede ser!!!","Tal vez, tal vez no"};
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +38,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Proceso
         Ball.setOnClickListener(this);
         Toast.makeText(MainActivity.this,"Haganme una Pregunta y Respondere...", Toast.LENGTH_SHORT).show();
+
+        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.mysong);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
     }
+
     @Override
     public void onClick(View v){
 
@@ -45,7 +58,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         break;
     }
-
 
 
     }

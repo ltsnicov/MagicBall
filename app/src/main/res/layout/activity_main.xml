@@ -4,48 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:background="@drawable/stars"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/conoce_tu_futuro"
-        android:textColor="#6633FF"
-        android:textSize="30sp"
-        android:textStyle="bold|italic"
-        android:layout_margin="40dp"
-         />
+        android:layout_height="146dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20sp"
+        android:contentDescription="@string/fab_transformation_scrim_behavior"
+        android:text="¡Conoce tu Fortuna Navideña!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#E1BBE7"
+        android:textSize="40sp"
+        android:textStyle="bold|italic" />
 
     <EditText
         android:id="@+id/pregunta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="207dp"
+        android:layout_height="39dp"
         android:layout_gravity="center"
+        android:autofillHints=""
         android:hint="@string/escriba_un_mensaje"
         android:inputType="textShortMessage"
-        android:textSize="24sp"
-
-        android:autofillHints="" />
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:textSize="23sp" />
 
     <ImageButton
         android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="285dp"
+        android:layout_width="293dp"
+        android:layout_height="311dp"
         android:layout_gravity="center"
         android:layout_margin="40dp"
-        android:src="@drawable/crystalball"
-        android:contentDescription="@string/todo" />
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitXY"
+        android:src="@drawable/crystalchrismas"
+        android:background="@android:color/transparent"
+        />
+
     <TextView
         android:id="@+id/respuestavista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="40sp"
-        android:layout_marginBottom="60sp"
+        android:layout_marginBottom="10sp"
         android:textColor="@color/purple_200"
-        android:text="@string/el_textview"
+        android:textSize="23sp"
         />
 
 </LinearLayout>
